@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+}
+
+.unstyle {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: .5rem .8rem;
+  cursor: pointer;
+}
+
+.active {
+  background-color: darken(aquamarine, 20);
+}
+
+.success {
+  background-color: rgba(29, 223, 22, 0.8);
+}
+
+.secondary {
+  background-color: rgba(221, 152, 24, .8);
+}
+
+.danger {
+  background-color: rgba(223, 22, 22, .8);
+}
+
+.container {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.nav {
+  background-color: aquamarine;
+
+  &-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-item {
+    margin-right: 1rem;
+  }
+
+  &-link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: .5rem .8rem;
+  }
+}
+
+.news {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: gray 0px 0px 3px 3px;
+  margin-bottom: 10px;
+
+  &-body {
+    flex-basis: 85%;
+    padding: .5rem;
+  }
+
+  &-control {
+    flex-basis: 15%;
+    padding: 1rem;
+    border-left: 1px solid gray;
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
