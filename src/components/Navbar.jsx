@@ -1,7 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import { useSelector } from 'react-redux/lib/hooks/useSelector'
-import { useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { logout, loginOpen } from '../actions/creators/auth'
 
 const Navbar = () => {

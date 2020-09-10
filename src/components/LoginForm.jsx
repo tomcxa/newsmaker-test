@@ -12,6 +12,7 @@ const LoginForm = () => {
 
     const submitHandler = (event) => {
         event.preventDefault()
+        console.log(value)
         for (let user of users) {
             if (user.name === value.name
                 && user.password === value.password) {

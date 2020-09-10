@@ -8,7 +8,7 @@ import Home from './pages/Home'
 import News from './pages/News'
 import Navbar from './components/Navbar'
 import LoginForm from './components/LoginForm'
-import { useSelector } from 'react-redux/lib/hooks/useSelector'
+import { useSelector } from 'react-redux'
 
 function App() {
     const isLoging = useSelector(state => state.auth.isLoging)
