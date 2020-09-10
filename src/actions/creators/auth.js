@@ -2,9 +2,9 @@ import {
     LOGIN, LOGOUT, LOGIN_SHOW, LOGIN_CLOSE
 } from '../types'
 
-export const login = (name, password, error) => ({
+export const login = (user) => ({
     type: LOGIN,
-    payload: { name, password, error }
+    payload: { ...user }
 })
 
 export const logout = () => ({

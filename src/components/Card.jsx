@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useDispatch } from 'react-redux'
+import moment from 'moment'
 import { deleteNews, successNews } from '../actions/creators/news'
-import { memo } from 'react'
 
-const Card = memo(({ news, user }) => {
+const Card = memo(({ news, isAdmin }) => {
     const dispatch = useDispatch()
 
     const deleteHandler = () => {
@@ -18,10 +18,10 @@ const Card = memo(({ news, user }) => {
         <div className={`card ${news.success ? 'success' : 'secondary'}`}>
             <div className="card-body">
                 <h3>{news.title}</h3>
-                <span className="date">{news.date}</span>
+                <span className="date">{moment(news.date).format("MM.DD.YYYY, HH:mm:ss")}</span>
                 <p>{news.text}</p>
             </div>
-            { user?.admin && (<div className="card-control">
+            { isAdmin && (<div className="card-control">
                 {
                     !news.success
                     && <button onClick={successHandler} className="btn success">Одобрить</button>

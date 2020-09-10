@@ -5,7 +5,6 @@ import {
 const initialState = {
     isLoging: false,
     currentUser: null,
-    error: false,
 }
 
 const authReducer = (state = initialState, { type, payload }) => {
@@ -23,13 +22,10 @@ const authReducer = (state = initialState, { type, payload }) => {
         case LOGIN:
             return {
                 ...state,
-                payload,
+                currentUser: payload,
             };
         case LOGOUT:
-            return {
-                ...state,
-                error: true,
-            };
+            return initialState;
         default:
             return state;
     }

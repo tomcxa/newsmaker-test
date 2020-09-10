@@ -1,7 +1,7 @@
 import {
     ADD_NEWS,
     SUCCESS_NEWS,
-    DELETE_NEWS
+    DELETE_NEWS,
 } from '../types'
 
 export const addNews = (news) => (

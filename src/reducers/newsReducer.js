@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid'
+import { users } from '../users'
 
 import {
     ADD_NEWS,
@@ -9,24 +10,27 @@ import {
 const initialState = [
     {   
         id: nanoid(),
-        title: 'News',
-        success: false,
-        text: 'asdaksjdjasdkajsdk jaskldjkasjdka sjd jaskjdkajsdjaj askskdkaksdk askdj jjjsjjsjs',
-        date: '22.07.2020'
-    },
-    {   
-        id: nanoid(),
-        title: 'News2',
+        creator: users[0].id,
+        title: 'Центр Гамалеи представил журналу Lancet протокол исследования вакцины',
         success: true,
-        text: 'asdaksjdjasdkajsdk jaskldjkasjdka sjd jaskjdkajsdjaj askskdkaksdk askdj jjjsjjsjs',
-        date: '22.07.2020'
+        text: 'Ранее сообщалось, что научный журнал Lancet предложил авторам исследования по российской вакцине "Спутник V" от коронавируса ответить на вопросы коллег, усомнившихся в выводах российских ученых.',
+        date: Date.now()
     },
     {   
         id: nanoid(),
-        title: 'News3',
+        creator: users[1].id,
+        title: 'Мосбиржа: курс рубля падает',
+        success: true,
+        text: 'На момент открытия торгов Московской биржи 10 сентября курс доллара составил 75,36 рублей, а евро — 89,0725 рублей.',
+        date: Date.now()
+    },
+    {   
+        id: nanoid(),
+        creator: users[0].id,
+        title: 'Российская киноиндустрия будет представлена на международном кинорынке в Торонто',
         success: false,
-        text: 'asdaksjdjasdkajsdk jaskldjkasjdka sjd jaskjdkajsdjaj askskdkaksdk askdj jjjsjjsjs',
-        date: '22.07.2020'
+        text: 'Компания «Роскино» при поддержке Министерства культуры создаст виртуальный стенд российского кино на фестивале TIFF Industry.',
+        date: Date.now()
     }
 ]
 

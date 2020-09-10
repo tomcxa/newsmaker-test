@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$success: rgba(29, 223, 22, .8);;
+$secondary: rgba(221, 152, 24, .8);
+$danger: rgba(223, 22, 22, .8);
+
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .unstyle {
@@ -16,19 +23,19 @@ body {
 }
 
 .active {
-  background-color: darken(aquamarine, 20);
+  background-color: darken($secondary, 20);
 }
 
 .success {
-  background-color: rgba(29, 223, 22, 0.8);
+  background-color: $success;
 }
 
 .secondary {
-  background-color: rgba(221, 152, 24, .8);
+  background-color: $secondary;
 }
 
 .danger {
-  background-color: rgba(223, 22, 22, .8);
+  background-color: $danger;
 }
 
 .container {
@@ -36,8 +43,48 @@ body {
   margin-right: 15px;
 }
 
+.wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.form {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+
+  .info {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+
+  input {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    display: block;
+    resize: vertical;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 .nav {
-  background-color: aquamarine;
+  background-color: $secondary;
 
   &-list {
     display: flex;
@@ -54,6 +101,10 @@ body {
     color: black;
     padding: .5rem .8rem;
   }
+}
+
+.greeting {
+  text-align: center;
 }
 
 .news {
