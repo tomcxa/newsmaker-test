@@ -26,8 +26,9 @@ const AddNewsForm = () => {
     }
 
     return (
-        <div className="wrapper">
+        <div className="wrapper">            
             <form onSubmit={submitHandler} className="form">
+                <h3 className="form__title">Создание новости</h3>
                 <input name="title" onChange={handleChange} value={item.title} placeholder="Название новости" />
                 <textarea name="text" onChange={handleChange} value={item.text} placeholder="Текст новости" />
                 <button className="btn">Создать</button>

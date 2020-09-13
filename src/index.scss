@@ -4,6 +4,10 @@ $success: rgba(29, 223, 22, .8);;
 $secondary: rgba(221, 152, 24, .8);
 $danger: rgba(223, 22, 22, .8);
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -20,6 +24,18 @@ body {
   border-radius: 5px;
   padding: .5rem .8rem;
   cursor: pointer;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: .5rem .8rem;
+}
+
+textarea {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: .5rem .8rem;
 }
 
 .active {
@@ -66,13 +82,19 @@ body {
     font-size: 11px;
   }
 
+  &__title {
+    margin: 0;
+  }
+
   button {
     margin-right: 10px;
   }
 
   input {
     display: block;
+    width: 100%;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   textarea {
